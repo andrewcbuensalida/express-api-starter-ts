@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			.on {
+				background-color: green;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="iframe_div">in i frame. click me</div>
+		<script>
+			const iframeDiv = document.querySelector("#iframe_div");
+			iframeDiv.addEventListener("click", () => {
+				if (iframeDiv.className === "off" || !iframeDiv.className) {
+					iframeDiv.className = "on";
+				} else {
+					iframeDiv.className = "off";
+				}
+			});
+		</script>
+	</body>
+</html>

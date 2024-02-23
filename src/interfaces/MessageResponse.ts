@@ -1,3 +1,9 @@
 export default interface MessageResponse {
-  message: string;
+	message: string;
+	listings?: Listing[];
+}
+
+interface Listing {
+	price: string;
+	address: string;
 }
