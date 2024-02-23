@@ -65,7 +65,7 @@ router.get<{}, MessageResponse>("/zillow", async (req, res) => {
 	await delay(5000);
 
   // have to scroll down so all listings captured
-  
+
 	const pricesElements = await page.$$(
 		`span[data-test="property-card-price"]`
 	);
@@ -95,7 +95,7 @@ router.get<{}, MessageResponse>("/zillow", async (req, res) => {
 			price: prices[i],
 			address: addresses[i],
 		};
-		listings.push(listing);
+		listings.push(listing)
 	}
 	browser.close();
 	res.json({ message: "Successfully scraped", listings });
